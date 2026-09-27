@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="deepCosmic" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0a1a36"/>
+      <stop offset="50%" stop-color="#040b1a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </radialGradient>
+    <radialGradient id="nebulaCyan" cx="20%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaBlue" cx="80%" cy="65%" r="45%">
+      <stop offset="0%" stop-color="#1e40af" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep space background -->
+  <rect width="1200" height="630" fill="url(#deepCosmic)"/>
+  <rect width="1200" height="630" fill="url(#nebulaCyan)"/>
+  <rect width="1200" height="630" fill="url(#nebulaBlue)"/>
+
+  <!-- Starfield dots -->
+  <g fill="#ffffff" opacity="0.6">
+    <circle cx="85" cy="90" r="1.5"/>
+    <circle cx="150" cy="220" r="1"/>
+    <circle cx="280" cy="110" r="2" fill="#7dd3fc"/>
+    <circle cx="410" cy="85" r="1"/>
+    <circle cx="590" cy="140" r="1.5"/>
+    <circle cx="720" cy="70" r="2" fill="#bae6fd"/>
+    <circle cx="890" cy="160" r="1.2"/>
+    <circle cx="1040" cy="110" r="1.8"/>
+    <circle cx="1120" cy="240" r="1"/>
+    <circle cx="95" cy="450" r="1.5"/>
+    <circle cx="210" cy="530" r="1.8" fill="#7dd3fc"/>
+    <circle cx="340" cy="480" r="1"/>
+    <circle cx="490" cy="560" r="1.5"/>
+    <circle cx="680" cy="490" r="2"/>
+    <circle cx="830" cy="540" r="1"/>
+    <circle cx="990" cy="460" r="1.5"/>
+    <circle cx="1110" cy="520" r="2" fill="#bae6fd"/>
+  </g>
+
+  <!-- Orbital rings -->
+  <ellipse cx="600" cy="315" rx="520" ry="210" fill="none" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.3" stroke-dasharray="6 4" transform="rotate(-15 600 315)"/>
+  <ellipse cx="600" cy="315" rx="360" ry="140" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.4" transform="rotate(18 600 315)"/>
+  <circle cx="600" cy="315" r="260" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- Orbital constellation nodes -->
+  <circle cx="260" cy="240" r="5" fill="#38bdf8"/>
+  <circle cx="260" cy="240" r="12" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="260" y1="240" x2="380" y2="180" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3"/>
+  <circle cx="380" cy="180" r="4" fill="#818cf8"/>
+
+  <circle cx="940" cy="380" r="5" fill="#06b6d4"/>
+  <circle cx="940" cy="380" r="14" fill="none" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- Decorative Badge -->
+  <rect x="420" y="110" width="360" height="38" rx="19" fill="#0f172a" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.2"/>
+  <circle cx="442" cy="129" r="4" fill="#38bdf8"/>
+  <text x="458" y="134" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#93c5fd" letter-spacing="1.5">BHOPAL, INDIA · B.TECH IT (2024–2028)</text>
+
+  <!-- Main Headline: Name -->
+  <text x="600" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="url(#textGrad)" letter-spacing="-1">
+    DEEKSHA KUSHWAH
+  </text>
+
+  <!-- Role Subtitle -->
+  <text x="600" y="305" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#7dd3fc" letter-spacing="1">
+    IT Student &amp; Developer Portfolio
+  </text>
+
+  <!-- Tagline Summary -->
+  <text x="600" y="355" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#94a3b8" letter-spacing="0.5">
+    C++/C Systems Programming · NASA Space Apps Challenge Global Nominee · Google Student Ambassador
+  </text>
+
+  <!-- Metrics / Key Highlights Cards -->
+  <g transform="translate(180, 420)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="250" height="96" rx="12" fill="#070e1c" fill-opacity="0.8" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="24" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">ACADEMIC STANDING</text>
+    <text x="24" y="62" font-family="monospace" font-size="20" font-weight="700" fill="#f8fafc">CGPA: 7.14</text>
+    <text x="24" y="80" font-family="monospace" font-size="12" fill="#38bdf8">Latest SGPA: 8.4</text>
+
+    <!-- Card 2 -->
+    <rect x="295" y="0" width="250" height="96" rx="12" fill="#070e1c" fill-opacity="0.8" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="319" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">HACKATHON RECOGNITION</text>
+    <text x="319" y="62" font-family="monospace" font-size="18" font-weight="700" fill="#f8fafc">Global Nominee</text>
+    <text x="319" y="80" font-family="monospace" font-size="12" fill="#38bdf8">NASA Space Apps Challenge</text>
+
+    <!-- Card 3 -->
+    <rect x="590" y="0" width="250" height="96" rx="12" fill="#070e1c" fill-opacity="0.8" stroke="#1e293b" stroke-width="1.2"/>
+    <text x="614" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">CAMPUS LEADERSHIP</text>
+    <text x="614" y="62" font-family="monospace" font-size="18" font-weight="700" fill="#f8fafc">Ambassador</text>
+    <text x="614" y="80" font-family="monospace" font-size="12" fill="#818cf8">Google Student Program</text>
+  </g>
+
+  <!-- Border line -->
+  <rect x="8" y="8" width="1184" height="614" rx="18" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-opacity="0.6"/>
+</svg>

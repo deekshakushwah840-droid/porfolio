@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --space-obsidian: #020617;
+    --space-darkblue: #030712;
+    --space-cosmic-1: #080e1a;
+    --space-cosmic-2: #0a1120;
+    --stellar-blue: #38bdf8;
+    --stellar-deepblue: #1e3a8a;
+    --stellar-cyan: #06b6d4;
+    --stellar-violet: #8b5cf6;
+    --starlight: #f8fafc;
+    --starlight-muted: #94a3b8;
+  }
+
+  body {
+    background: radial-gradient(circle at 50% 15%, #0a152e 0%, #080e1a 35%, #030712 70%, #020617 100%);
+    background-color: #020617;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020617;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Syne', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Perspective containers for 3D typography & space cards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Cosmic Blue Glass Surfaces & Enhanced Polish */
+.cosmic-glass {
+  position: relative;
+  background: rgba(10, 17, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.16);
+  box-shadow: 0 16px 40px -15px rgba(6, 182, 212, 0.10), 0 0 20px -8px rgba(30, 58, 138, 0.15);
+}
+
+/* Top-edge 1px glass reflection line */
+.cosmic-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.35), rgba(248, 250, 252, 0.25), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cosmic-glass-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cosmic-glass-hover:hover {
+  background: rgba(14, 23, 44, 0.88);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 20px 45px -12px rgba(6, 182, 212, 0.22), 0 0 25px -4px rgba(56, 189, 248, 0.25);
+}
+
+/* Conic gradient rotating border effect for active / hover cards */
+@keyframes spin-conic {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.conic-border-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.conic-border-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(6, 182, 212, 0.15) 60deg, rgba(139, 92, 246, 0.2) 120deg, transparent 180deg);
+  animation: spin-conic 14s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.conic-border-wrap:hover::after {
+  opacity: 1;
+}
+
+.cosmic-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgba(14, 25, 48, 0.85) 0%, rgba(8, 14, 26, 0.95) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 16px 40px -15px rgba(6, 182, 212, 0.08);
+}
+
+.cosmic-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+  pointer-events: none;
+}
+
+/* Subtle multi-stop radial glow zone utility */
+.glow-zone-subtle {
+  background: radial-gradient(ellipse 65% 50% at 50% 50%, rgba(6, 182, 212, 0.08) 0%, rgba(139, 92, 246, 0.05) 45%, transparent 75%);
+}
+
+.glow-zone-hero {
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(56, 189, 248, 0.09) 0%, rgba(30, 58, 138, 0.08) 50%, transparent 80%);
+}
+
+/* Badge gentle pulsing aura */
+@keyframes badge-aura {
+  0%, 100% {
+    box-shadow: 0 0 12px 1px rgba(56, 189, 248, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 24px 4px rgba(56, 189, 248, 0.55), 0 0 35px 8px rgba(139, 92, 246, 0.25);
+  }
+}
+
+.badge-pulse-aura {
+  animation: badge-aura 3.5s ease-in-out infinite;
+}
+
+/* Dual Marquee Infinite Loops */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 22s linear infinite;
+}
+
+.animate-marquee-rtl {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 26s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-ltr,
+.marquee-container:hover .animate-marquee-rtl {
+  animation-play-state: paused;
+}
+
+/* Sudden 3D Hero Pop-up Keyframe Animation */
+@keyframes hero-popup {
+  0% {
+    opacity: 0;
+    transform: translateZ(-350px) scale(0.4) rotateX(15deg);
+    filter: blur(12px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateZ(30px) scale(1.04) rotateX(-2deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px) scale(1) rotateX(0deg);
+    filter: blur(0px);
+  }
+}
+
+.animate-hero-popup {
+  animation: hero-popup 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slow floating subtle 3D drift */
+@keyframes floating-drift {
+  0%, 100% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotateZ(0.5deg);
+  }
+}
+
+.animate-floating-drift {
+  animation: floating-drift 6s ease-in-out infinite;
+}
+
+/* Orbital rotation keyframes */
+@keyframes orbit-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pulse-signal {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-orbit {
+  animation: orbit-slow 40s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbit-reverse 30s linear infinite;
+}
+
+.animate-signal-pulse {
+  animation: pulse-signal 3s ease-in-out infinite;
+}
+
+/* Faint animated film grain overlay */
+@keyframes grain-shift {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-1.5%, 1.5%); }
+  40% { transform: translate(1.5%, -1.5%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(1%, 2%); }
+}
+
+.animate-film-grain {
+  animation: grain-shift 0.8s steps(4) infinite;
+}
+
+/* prefers-reduced-motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-spin,
+  .animate-pulse,
+  .animate-ping,
+  .animate-marquee-ltr,
+  .animate-marquee-rtl,
+  .animate-floating-drift,
+  .animate-orbit,
+  .animate-orbit-reverse,
+  .animate-film-grain {
+    animation: none !important;
+  }
+}
+
+/* Production Print Stylesheet (Ctrl + P) - Clean readable black-on-white resume view */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt;
+  }
+
+  /* Hide interactive / visual heavy canvas elements during print */
+  canvas,
+  header,
+  .marquee-container,
+  .animate-floating-drift,
+  button,
+  .fixed,
+  #cursor-dot,
+  .badge-pulse-aura,
+  [aria-label="Back to top"] {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .cosmic-glass,
+  .cosmic-panel {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    color: #0f172a !important;
+    backdrop-filter: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+  }
+
+  p, span, div {
+    color: #334155 !important;
+  }
+
+  .text-sky-300,
+  .text-sky-400,
+  .text-cyan-300,
+  .text-cyan-400,
+  .text-blue-400 {
+    color: #0369a1 !important;
+    font-weight: 600 !important;
+  }
+
+  .bg-black\/50,
+  .bg-black\/60,
+  .bg-black\/40,
+  .bg-slate-900\/90,
+  .bg-slate-950 {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
+
